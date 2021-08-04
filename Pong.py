@@ -34,8 +34,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0) # ball starts in middle of screen
-ball.dx = .3 #movement speed of ball
-ball.dy = .3
+ball.dx = .33 # movement speed of the ball dx
+ball.dy = .33 # movement speed of the ball dy
 
 # Score Display
 pen = turtle.Turtle()
