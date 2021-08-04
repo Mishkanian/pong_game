@@ -1,4 +1,4 @@
-# Pong
+# Pong Game
 
 ## Project Overview
 The purpose of this project is to create Pong using Python. Pong is a classic 2-D arcade game originally released in 1972 and created by [Allan Alcorn](https://en.wikipedia.org/wiki/Allan_Alcorn). To learn more about the origins of Pong, [click here](https://en.wikipedia.org/wiki/Pong).
@@ -28,7 +28,7 @@ ball.dx = .33 # movement speed of the ball dx
 ball.dy = .33 # movement speed of the ball dy
 ```
 
-Increasing these values will increase the ball speed and therefore make the game more difficult. If the ball is moving too slow, increase these values. However, increasing these values too much will cause the ball to shoot across the screen and now allow the paddles enough time to get to the ball. If the ball is moving too fast, decrease these values.
+Increasing these values will increase the ball speed and therefore make the game more difficult. If you find that the ball is moving too slow, increase these values. However, increasing these values too much will cause the ball to shoot across the screen, which does not allow the paddles enough time to get to the ball. If the ball is moving too fast, decrease these values.
 
 ## Ideas for Future Development
 - For future development, I would add sounds to the game. For example, sounds when the ball hits a paddle and when players score points. This would make the experience much more fun and engaging.
