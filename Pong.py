@@ -34,6 +34,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0) # ball starts in middle of screen
+ball.dx = .4 #movement of ball
+ball.dy = .4
 
 def paddle_a_up():
     """
@@ -81,3 +83,24 @@ wn.onkeypress(paddle_b_down, "Down")
 # Main game loop
 while True:
     wn.update()
+
+    # Ball movement
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    # Border checks
+    if ball.ycor() > 290:
+        ball.sety(290)
+        ball.dy *= -1 # reverse direction if ball is too high
+    if ball.ycor() < -290:
+        ball.sety(-290)
+        ball.dy *= -1 # reverse direction if ball is too low
+
+    # retart game when the ball passes a paddle
+    if ball.xcor() > 390:
+        ball.goto(0, 0)
+        ball.dx *= -1
+    if ball.xcor() < -390:
+        ball.goto(0, 0)
+        ball.dx *= -1
+
