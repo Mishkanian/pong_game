@@ -9,7 +9,7 @@ wn.bgcolor("black")
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
-# Paddle A (Player's paddle)
+# Paddle A
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
 paddle_a.shape("square")
@@ -34,8 +34,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0) # ball starts in middle of screen
-ball.dx = .4 #movement of ball
-ball.dy = .4
+ball.dx = .3 #movement speed of ball
+ball.dy = .3
 
 def paddle_a_up():
     """
@@ -103,4 +103,15 @@ while True:
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
+    
+    # Collisions
+    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 
+                          and ball.ycor() > paddle_b.ycor() - 40):
+                          ball.setx(340)
+                          ball.dx *= -1
+
+    if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 
+                          and ball.ycor() > paddle_a.ycor() - 40):
+                          ball.setx(-340)
+                          ball.dx *= -1
 
